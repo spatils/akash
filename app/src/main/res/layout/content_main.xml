@@ -93,7 +93,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Mobile"
+                                android:text="Garment Accessories"
                                 android:textColor="#000"
                                 android:textSize="18dp" />
                             <View
@@ -138,7 +138,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Recharge"
+                                android:text="Shoes Accessories"
                                 android:textColor="#000"
                                 android:textSize="18dp" />
                             <View
