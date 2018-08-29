@@ -1,5 +1,6 @@
-package com.example.admin.akash.ShoeAccessory;
+package com.example.admin.akash.DisplayImageList;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,13 +9,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.admin.akash.R;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.view.SimpleDraweeView;
 
-public class ShoeAccessory extends AppCompatActivity {
+public class DisplayImages extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shoe_accessory);
+        Fresco.initialize(this);
+        setContentView(R.layout.activity_display_images);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,6 +30,10 @@ public class ShoeAccessory extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //Uri uri = Uri.parse("https://drive.google.com/open?id=1ktY8tPT0_TBTme_ezWsmNs94hfmum4Bk");
+        Uri uri = Uri.parse("https://raw.githubusercontent.com/facebook/fresco/master/docs/static/logo.png");
+        SimpleDraweeView draweeView = (SimpleDraweeView) findViewById(R.id.sdvImage1);
+        draweeView.setImageURI(uri);
     }
 
 }

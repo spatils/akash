@@ -1,8 +1,11 @@
 package com.example.admin.akash;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +18,9 @@ import android.view.MenuItem;
 
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
+
+import com.example.admin.akash.DisplayAccessory.DisplayAccessory;
+
 import java.util.ArrayList;
 
 import java.util.Timer;
@@ -51,6 +57,29 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        CardView  garmentAccessory = (CardView) findViewById(R.id.bankcardId);
+        garmentAccessory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this,
+                        DisplayAccessory.class);
+                myIntent.putExtra("ACCESSORY","GARMENT");
+                startActivity(myIntent);
+            }
+        });
+        CardView  shoeAccessory = (CardView) findViewById(R.id.bankcardId1);
+        shoeAccessory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this,
+                        DisplayAccessory.class);
+                myIntent.putExtra("ACCESSORY","SHOE");
+                startActivity(myIntent);
+            }
+        });
+
+
         init();
     }
     private void init() {
@@ -120,7 +149,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            final Context context = this;
+            Intent intent = new Intent(context, DisplayAccessory.class);
+            intent.putExtra("ACCESSORY","GARMENT");
+            startActivity(intent);
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -129,12 +162,20 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
+
         } else if (id == R.id.nav_send) {
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    public void selectDrawerItem(MenuItem menuItem) {
+
+
+
+    }
+
 }

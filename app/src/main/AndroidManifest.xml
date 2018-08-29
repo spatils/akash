@@ -22,13 +22,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ShoeAccessory.ShoeAccessory"
+            android:name=".DisplayAccessory.DisplayAccessory"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".DisplayImageList.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".DisplayImageList.DisplayImages"
+            android:label="@string/title_activity_display_images"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
