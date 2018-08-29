@@ -1,7 +1,4 @@
-package com.example.admin.akash.util;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+package com.example.admin.akash.common;
 
 public class   AccessoryList {
 

@@ -1,6 +1,5 @@
 package com.example.admin.akash.DisplayAccessory;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,11 +10,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.admin.akash.DisplayImageList.DisplayImages;
 import com.example.admin.akash.R;
-import com.example.admin.akash.util.AccessoryList;
+import com.example.admin.akash.common.AccessoryList;
 
 public class DisplayAccessory extends AppCompatActivity {
     String accessoryName ="GARMENT" ;
