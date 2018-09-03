@@ -26,8 +26,18 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".DisplayImageList.DisplayImages"
+            android:name=".DisplayProductGroup.DisplayProductGroup"
             android:label="@string/title_activity_display_images"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DisplayProduct.DisplayProduct"
+            android:label="@string/title_activity_show_image"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ShowImage"
-    tools:showIn="@layout/activity_show_image">
+    tools:context=".DisplayProduct.DisplayProduct"
+    tools:showIn="@layout/activity_display_product">
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/productImage"
         android:layout_width="400dp"
         android:layout_height="400dp"
 
@@ -16,13 +16,13 @@
         />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/productName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         />
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/productDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"

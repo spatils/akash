@@ -11,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.admin.akash.DisplayImageList.DisplayImages;
+import com.example.admin.akash.DisplayProductGroup.DisplayProductGroup;
 import com.example.admin.akash.R;
 import com.example.admin.akash.common.AccessoryList;
 
@@ -48,7 +48,7 @@ public class DisplayAccessory extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent myIntent = new Intent(DisplayAccessory.this,
-                        DisplayImages.class);
+                        DisplayProductGroup.class);
                 System.out.println(" Position "+position+" view "+view);
                 myIntent.putExtra("ACCESSORY",accessoryName);
                 Button clickedButton = (Button ) view ;

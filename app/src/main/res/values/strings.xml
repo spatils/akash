@@ -9,4 +9,5 @@
     <string name="title_activity_accessory">Accessory</string>
     <string name="title_activity_main2">Product Catagories</string>
     <string name="title_activity_display_images">DisplayImages</string>
+    <string name="title_activity_show_image">ShowImage</string>
 </resources>

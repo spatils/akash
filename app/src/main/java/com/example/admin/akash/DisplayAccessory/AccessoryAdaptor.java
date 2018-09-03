@@ -1,19 +1,13 @@
 package com.example.admin.akash.DisplayAccessory;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.example.admin.akash.DisplayImageList.DisplayImages;
-import com.example.admin.akash.MainActivity;
 import com.example.admin.akash.R;
 
 public class AccessoryAdaptor extends ArrayAdapter<String>   {
@@ -28,7 +22,7 @@ public class AccessoryAdaptor extends ArrayAdapter<String>   {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.accessory_listview, parent, false);
+        View rowView = inflater.inflate(R.layout.table_accessory_listview, parent, false);
         Button textViewEven = (Button) rowView.findViewById(R.id.evenAccessory);
         textViewEven.setText(values[position]);
         textViewEven.setOnClickListener(  new View.OnClickListener() {
