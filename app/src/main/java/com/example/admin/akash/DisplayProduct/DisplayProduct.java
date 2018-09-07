@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.admin.akash.R;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.drawable.ProgressBarDrawable;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 public class DisplayProduct extends AppCompatActivity {
@@ -41,6 +42,7 @@ public class DisplayProduct extends AppCompatActivity {
         TextView textViewProductDescription = (TextView) findViewById(R.id.productDescription);
         Uri uri = Uri.parse(imageURL);
         SimpleDraweeView draweeView = (SimpleDraweeView) findViewById(R.id.productImage);
+        draweeView.getHierarchy().setProgressBarImage(new ProgressBarDrawable());
         draweeView.setImageURI(uri);
         textViewProductName.setText (productName);
         textViewProductDescription.setText(productDescription);

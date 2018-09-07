@@ -39,8 +39,18 @@ public class ProductHandler {
         }
         return productHandler;
     }
-    public static ArrayList<Product>  getProductListByProductGrooup (String categary, String productGroup){
-        return  null;
+    public   ArrayList<Product>  getProductListByProductGrooup (String categary, String productGroup){
+        ProductGroup pg = new ProductGroup();
+        for ( int i=0; i < productGroupList.size();i ++ ){
+            if(productGroupList.get(i).getCatagoryName().equals(categary) && (productGroupList.get(i).getProductGroupName().equals(productGroup))) {
+                pg = productGroupList.get(i);
+            }
+        }
+        ArrayList<Product> productListByProductGroup = new ArrayList<>();
+        for ( int i=pg.getStartId(); i <= pg.getEndId();i ++){
+            productListByProductGroup.add(productList.get(i));
+        }
+        return  productListByProductGroup;
 
     }
     public   void addProduct(Product product) {
