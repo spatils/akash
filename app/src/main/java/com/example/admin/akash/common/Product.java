@@ -8,7 +8,9 @@ public class Product {
         this.productDescription = productDescription;
         this.productImageURL = productImageURL;
     }
+    public Product(){
 
+    }
     public String getCatagory() {
 
         return catagory;

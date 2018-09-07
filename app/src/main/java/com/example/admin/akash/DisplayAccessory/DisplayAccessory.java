@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,9 +15,11 @@ import android.widget.ListView;
 import com.example.admin.akash.DisplayProductGroup.DisplayProductGroup;
 import com.example.admin.akash.R;
 import com.example.admin.akash.common.AccessoryList;
+import com.example.admin.akash.common.ProductHandler;
 
 public class DisplayAccessory extends AppCompatActivity {
     String accessoryName ="GARMENT" ;
+    ProductHandler ph = ProductHandler.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,23 +39,21 @@ public class DisplayAccessory extends AppCompatActivity {
         accessoryName =  getIntent().getStringExtra("ACCESSORY");
         ListView listViewAccessory = (ListView)  (ListView) findViewById(R.id.accessorylistView);
         AccessoryAdaptor accessoryAdaptor = null;
-        if (accessoryName.equals("GARMENT")) {
-            accessoryAdaptor = new AccessoryAdaptor(DisplayAccessory.this, AccessoryList.getInstance().getGarmentList());
-        }
-        else {
-
-            accessoryAdaptor = new AccessoryAdaptor(DisplayAccessory.this, AccessoryList.getInstance().getShoeList());
-        }
+        Log.v(this.getLocalClassName(),"accessoryName  "+accessoryName);
+        Log.v(this.getLocalClassName(),"Size  "+ph.getProductGroupList().size());
+        Log.v(this.getLocalClassName(),"Size  "+ph.getProductGroupList().get(1).getCatagoryName());
+        Log.v(this.getLocalClassName(),"Size  "+ph.getProductList().size());
+        accessoryAdaptor = new AccessoryAdaptor(DisplayAccessory.this, ph.getProductGroupByCategary(accessoryName));
         listViewAccessory.setAdapter(accessoryAdaptor);
         listViewAccessory.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent myIntent = new Intent(DisplayAccessory.this,
                         DisplayProductGroup.class);
-                System.out.println(" Position "+position+" view "+view);
+                Log.v("onItemClick" ," Position "+position+" view "+view);
                 myIntent.putExtra("ACCESSORY",accessoryName);
                 Button clickedButton = (Button ) view ;
-                System.out.println(" Text value from Button "+clickedButton.getText());
+                Log.v("onItemClick" ," Text value from Button "+clickedButton.getText());
                 myIntent.putExtra("PRODUCTGROUP",clickedButton.getText());
                                startActivity(myIntent);
 
