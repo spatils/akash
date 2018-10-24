@@ -27,22 +27,12 @@ public class DisplayAccessory extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         accessoryName =  getIntent().getStringExtra("ACCESSORY");
         ListView listViewAccessory = (ListView)  (ListView) findViewById(R.id.accessorylistView);
         AccessoryAdaptor accessoryAdaptor = null;
         Log.v(this.getLocalClassName(),"accessoryName  "+accessoryName);
-        Log.v(this.getLocalClassName(),"Size  "+ph.getProductGroupList().size());
-        Log.v(this.getLocalClassName(),"Size  "+ph.getProductGroupList().get(1).getCatagoryName());
-        Log.v(this.getLocalClassName(),"Size  "+ph.getProductList().size());
+        Log.v(this.getLocalClassName(),"____Size of ph "+ph.getProductGroupList().size());
+        Log.v(this.getLocalClassName(),"____Size of ph "+ph.getProductList().size());
         accessoryAdaptor = new AccessoryAdaptor(DisplayAccessory.this, ph.getProductGroupByCategary(accessoryName));
         listViewAccessory.setAdapter(accessoryAdaptor);
         listViewAccessory.setOnItemClickListener(new AdapterView.OnItemClickListener() {

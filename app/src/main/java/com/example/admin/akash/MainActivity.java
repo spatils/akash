@@ -44,7 +44,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private static ViewPager mPager;
+    private  ViewPager mPager;
     private static int currentPage = 0;
     private static final Integer[] XMEN= {R.drawable.ic_menu_camera,R.drawable.ic_menu_send,R.drawable.ic_menu_manage,R.drawable.ic_menu_share,R.drawable.ic_menu_manage};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
@@ -52,33 +52,20 @@ public class MainActivity extends AppCompatActivity
     String scriptURL = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=SHEETID&sheet=Sheet1";
     String JSONURL = scriptURL.replace("SHEETID",spreadsheetId);
     ProductHandler ph = ProductHandler.getInstance();
-
+    String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         CardView  garmentAccessory = (CardView) findViewById(R.id.bankcardId);
         garmentAccessory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +74,7 @@ public class MainActivity extends AppCompatActivity
                         DisplayAccessory.class);
                 myIntent.putExtra("ACCESSORY","Garment Accessories");
                 startActivity(myIntent);
+                // TODO Do not call action unless Asyn Task is complete
             }
         });
         CardView  shoeAccessory = (CardView) findViewById(R.id.bankcardId1);
@@ -97,14 +85,16 @@ public class MainActivity extends AppCompatActivity
                         DisplayAccessory.class);
                 myIntent.putExtra("ACCESSORY","Shoes Accessories");
                 startActivity(myIntent);
+                // TODO Do not call action unless Asyn Task is complete
             }
         });
 
 
         init();
-        checkInternetConenction();
-
-        new ReadGoogleWorkSheet().execute();
+        if (checkInternetConenction() )  new ReadGoogleWorkSheet().execute();
+        ProductHandler ph=  ProductHandler.getInstance();
+        Log.v(TAG,"____Size of ph "+ph.getProductGroupList().size());
+        Log.v(TAG,"____Size of ph "+ph.getProductList().size());
     }
     private void init() {
         for(int i=0;i<XMEN.length;i++)
