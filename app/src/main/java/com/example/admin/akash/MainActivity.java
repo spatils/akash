@@ -1,22 +1,17 @@
 package com.example.admin.akash;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import android.os.Handler;
@@ -27,6 +22,7 @@ import com.example.admin.akash.DisplayAccessory.DisplayAccessory;
 import com.example.admin.akash.common.Product;
 import com.example.admin.akash.common.ProductGroup;
 import com.example.admin.akash.common.ProductHandler;
+import com.example.admin.akash.FAQ.FAQ;
 import com.example.admin.akash.util.googledrive.HttpHandler;
 
 
@@ -86,10 +82,42 @@ public class MainActivity extends AppCompatActivity
                 // TODO Do not call action unless Asyn Task is complete
             }
         });
+        CardView  callNow = (CardView) findViewById(R.id.callnow);
+        callNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:+919930646648"));
+                startActivity(intent);
 
+            }
+        });
+        CardView  sendSMS = (CardView) findViewById(R.id.sendsms);
+        sendSMS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Uri sms_uri = Uri.parse("smsto:+919930646648");
+                Intent sms_intent = new Intent(Intent.ACTION_SENDTO, sms_uri);
+                sms_intent.putExtra("sms_body", "Contacting Via Your Mobile App.We need more information! Type Here - \"");
+                startActivity(sms_intent);
+
+            }
+        });
+
+        CardView  faq = (CardView) findViewById(R.id.faq);
+        faq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this,
+                        FAQ.class);
+                startActivity(myIntent);
+
+            }
+        });
 
         init();
-        if (checkInternetConenction() )  new ReadGoogleWorkSheet().execute();
+        if (checkInternetConenction() && !isProductListAlreadyDownloaded())  new ReadGoogleWorkSheet().execute();
         ProductHandler ph=  ProductHandler.getInstance();
         Log.v(TAG,"____Size of ph "+ph.getProductGroupList().size());
         Log.v(TAG,"____Size of ph "+ph.getProductList().size());
@@ -138,6 +166,11 @@ public class MainActivity extends AppCompatActivity
 
 
 
+    }
+    private boolean isProductListAlreadyDownloaded(){
+        if (ph.getProductList() == null || ph.getProductList().size() ==0 )
+         return false;
+        else return true ;
     }
     private boolean checkInternetConenction() {
         // get Connectivity Manager object to check connection
@@ -230,7 +263,7 @@ public class MainActivity extends AppCompatActivity
                     productGroup.setCatagoryName(previousCatagory);
                     productGroup.setProductGroupName(previousProductGroup);
                     ph.addProductGroup(productGroup);
-                    Log.v(TAG,"Adding Product Groyp"+productGroup.getCatagoryName() + productGroup.getProductGroupName()+ productGroup.getStartId()+productGroup.getEndId());
+                    Log.v(TAG,"Adding Product Group"+productGroup.getCatagoryName() + productGroup.getProductGroupName()+ productGroup.getStartId()+productGroup.getEndId());
 
 
                 } catch (final JSONException e) {
