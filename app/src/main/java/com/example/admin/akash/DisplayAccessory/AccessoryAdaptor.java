@@ -1,6 +1,7 @@
 package com.example.admin.akash.DisplayAccessory;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,7 @@ public class AccessoryAdaptor extends ArrayAdapter<String>   {
 
             }
         });
+        rowView.setBackgroundColor(Color.GREEN);
         return rowView;
     }
 }

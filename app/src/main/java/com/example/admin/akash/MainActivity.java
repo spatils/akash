@@ -19,10 +19,10 @@ import android.support.v4.view.ViewPager;
 import android.widget.Toast;
 
 import com.example.admin.akash.DisplayAccessory.DisplayAccessory;
+import com.example.admin.akash.FAQ.FAQ;
 import com.example.admin.akash.common.Product;
 import com.example.admin.akash.common.ProductGroup;
 import com.example.admin.akash.common.ProductHandler;
-import com.example.admin.akash.FAQ.FAQ;
 import com.example.admin.akash.util.googledrive.HttpHandler;
 
 

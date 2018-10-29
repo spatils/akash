@@ -11,4 +11,10 @@
     <string name="title_activity_display_images">DisplayImages</string>
     <string name="title_activity_show_image">ShowImage</string>
     <string name="title_activity_faq">FAQ</string>
+    <string name="question1">How to place an order?</string>
+    <string name="answer1">You can go to the Dashboard of this app and click the call or sms icon and we will be happy to assist you with placing an order with us.</string>
+    <string name="answer2">Yes! Absolutely, we are more than happy to deliver any product in any quantity in your country.</string>
+    <string name="question2">Do you deliver internationally?</string>
+    <string name="question3">What if the product I want is not listed?</string>
+    <string name="answer3">Need not worry.Feel free to send us your requirement via sms, email or call and we will be happy to accomodate your request of custom products</string>
 </resources>

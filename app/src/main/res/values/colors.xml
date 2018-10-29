@@ -11,4 +11,5 @@
     <color name="pinky">#fe104d</color>
     <color name="lightgray">#808080</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>
