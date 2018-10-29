@@ -29,6 +29,12 @@ public class AccessoryAdaptor extends ArrayAdapter<String>   {
         View rowView = inflater.inflate(R.layout.table_accessory_listview, parent, false);
         Button textViewEven = (Button) rowView.findViewById(R.id.evenAccessory);
         textViewEven.setText(values.get(position));
+        if (position % 2 == 0) {
+            textViewEven.setBackgroundColor(Color.parseColor("#00bfa5"));
+        } else
+            textViewEven.setBackgroundColor(Color.parseColor("#a569bd"));
+
+
         textViewEven.setOnClickListener(  new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +46,6 @@ public class AccessoryAdaptor extends ArrayAdapter<String>   {
 
             }
         });
-        rowView.setBackgroundColor(Color.GREEN);
         return rowView;
     }
 }
