@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
@@ -117,10 +118,10 @@ public class MainActivity extends AppCompatActivity
         });
 
         init();
+        if(!checkInternetConenction()) Snackbar.make(findViewById(R.id.drawer_layout), "Please connect to the internet", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
         if (checkInternetConenction() && !isProductListAlreadyDownloaded())  new ReadGoogleWorkSheet().execute();
-        ProductHandler ph=  ProductHandler.getInstance();
-        Log.v(TAG,"____Size of ph "+ph.getProductGroupList().size());
-        Log.v(TAG,"____Size of ph "+ph.getProductList().size());
+
     }
     private void init() {
         for(int i=0;i<XMEN.length;i++)
@@ -185,14 +186,14 @@ public class MainActivity extends AppCompatActivity
                 connec.getNetworkInfo(1).getState() ==
                         android.net.NetworkInfo.State.CONNECTING ||
                 connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED) {
-            Toast.makeText(this, " Connected ", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, " Connected ", Toast.LENGTH_LONG).show();
             return true;
         } else if (
                 connec.getNetworkInfo(0).getState() ==
                         android.net.NetworkInfo.State.DISCONNECTED ||
                         connec.getNetworkInfo(1).getState() ==
                                 android.net.NetworkInfo.State.DISCONNECTED) {
-            Toast.makeText(this, " Not Connected ", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, " Not Connected ", Toast.LENGTH_LONG).show();
             return false;
         }
         return false;
@@ -205,7 +206,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            Toast.makeText(MainActivity.this,"Json Data is                     downloading",Toast.LENGTH_LONG).show();
+            //Toast.makeText(MainActivity.this,"Json Data is                     downloading",Toast.LENGTH_LONG).show();
 
         }
 

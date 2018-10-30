@@ -22,9 +22,10 @@
             />
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/productImage"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
+            android:layout_width="325dp"
+            android:layout_height="325dp"
             android:contentDescription="icon"
+            android:layout_gravity="center"
             />
         <TextView
         android:id="@+id/productDescription"
