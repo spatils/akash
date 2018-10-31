@@ -1,5 +1,6 @@
 package com.example.admin.akash;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.Uri;
@@ -42,6 +43,7 @@ import me.relex.circleindicator.CircleIndicator;
 public class MainActivity extends AppCompatActivity
          {
     private  ViewPager mPager;
+             public ProgressDialog mProgressDialog;
     private static int currentPage = 0;
     private static final Integer[] XMEN= {R.drawable.ic_menu_camera,R.drawable.ic_menu_send,R.drawable.ic_menu_manage,R.drawable.ic_menu_share,R.drawable.ic_menu_manage};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
@@ -207,7 +209,7 @@ public class MainActivity extends AppCompatActivity
         protected void onPreExecute() {
             super.onPreExecute();
             //Toast.makeText(MainActivity.this,"Json Data is                     downloading",Toast.LENGTH_LONG).show();
-
+            showProgressBar();
         }
 
         @Override
@@ -283,11 +285,19 @@ public class MainActivity extends AppCompatActivity
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-
+            mProgressDialog.dismiss();
         }
     }
 
+    private void showProgressBar(){
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog.setMessage("Loading ...");
+            mProgressDialog.setIndeterminate(true);
+        }
 
+        mProgressDialog.show();
+    }
 
 
 
