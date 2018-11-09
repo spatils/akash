@@ -25,6 +25,7 @@ import com.example.admin.akash.FAQ.FAQ;
 import com.example.admin.akash.common.Product;
 import com.example.admin.akash.common.ProductGroup;
 import com.example.admin.akash.common.ProductHandler;
+import com.example.admin.akash.services.Services;
 import com.example.admin.akash.util.googledrive.HttpHandler;
 
 
@@ -114,6 +115,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent myIntent = new Intent(MainActivity.this,
                         FAQ.class);
+                startActivity(myIntent);
+
+            }
+        });
+
+        CardView  services = (CardView) findViewById(R.id.services);
+        services.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this,
+                        Services.class);
                 startActivity(myIntent);
 
             }

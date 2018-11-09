@@ -30,18 +30,22 @@
         <activity
             android:name=".DisplayProductGroup.DisplayProductGroup"
             android:label="@string/title_activity_display_images"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DisplayProduct.DisplayProduct"
             android:label="@string/title_activity_show_image"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FAQ.FAQ"
             android:label="@string/title_activity_faq"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Delete"
             android:label="@string/title_activity_delete"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".services.Services"
+            android:label="@string/title_activity_services"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

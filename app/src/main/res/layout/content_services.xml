@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".services.Services"
+    tools:showIn="@layout/activity_services">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/serviceLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:clickable="true"
+            android:onClick="provideAnswer"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/plus1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:background="@drawable/baseline_add_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/minus1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:background="@drawable/baseline_remove_white_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/service1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/service1"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/serviceDetails1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:text="@string/serviceDetails1"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/serviceLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:clickable="true"
+            android:onClick="provideAnswer"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/plus2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_add_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/minus2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/baseline_remove_white_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/service2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/service2"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/serviceDetails2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:text="@string/serviceDetails2"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/serviceLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:onClick="provideAnswer"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/plus3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_add_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/minus3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/baseline_remove_white_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/service3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/yellow"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/service3"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/serviceDetails3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:text="@string/serviceDetails3"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/serviceLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:onClick="provideAnswer"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/plus4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_add_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/minus4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/baseline_remove_white_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/service4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/service4"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/serviceDetails4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:text="@string/serviceDetails4"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/serviceLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:onClick="provideAnswer"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/plus5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_add_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/minus5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/baseline_remove_white_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/service5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/service5"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/serviceDetails5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:text="@string/serviceDetails5"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/serviceLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:onClick="provideAnswer"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/plus6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_add_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/minus6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/baseline_remove_white_24dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/service6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/yellow"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:text="@string/service6"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/serviceDetails6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:fromHtml=("@string/serviceDetails6")
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
