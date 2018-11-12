@@ -7,7 +7,9 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".services.Services"
     tools:showIn="@layout/activity_services">
-    <LinearLayout
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content">>
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -311,11 +313,12 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:padding="15dp"
-                android:fromHtml=("@string/serviceDetails6")
+                android:text= ""
                 android:textColor="@color/black"
                 android:visibility="gone" />
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

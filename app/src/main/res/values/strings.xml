@@ -28,23 +28,33 @@
     <string name="service4">CNC MACHINE</string>
     <string name="serviceDetails4">CNC Machining is a process used in the manufacturing sector that involves the use of computers to control machine tools. Tools that can be controlled in this manner include lathes, mills, routers and grinders. Akash Industries has its own in-house CNC machining setup. Our in house machine is used only for new developments as per requirement from our customers. The CNC machines use a tailored approach to manufacture customized products as required.</string>
     <string name="service5">Plating </string>
-    <string name="serviceDetails5">Zinc die castings are a unique choice for countless decorative and functional applications. Zinc is a relatively dense metal, which has a feel of “substance” and durability. Zinc also accepts a broad assortment of finishes, from chemical conversion treatments to electroplating to sprayed and baked polymers.
+    <string name="serviceDetails5"> <![CDATA[Zinc die castings are a unique choice for countless decorative and functional applications. Zinc is a relatively dense metal, which has a feel of “substance” and durability. Zinc also accepts a broad assortment of finishes, from chemical conversion treatments to electroplating to sprayed and baked polymers.
 
-It is a process that uses electric current to reduce dissolved metal cations so that they form a thin coherent metal coating on an electrode. The term is also used for electrical oxidation of anions onto a solid substrate. Our plating department has the capability to match any shade and finish required. Our products are majorly indirectly exported and hence we have to maintain optimum level of lead and nickel. We strongly believe in Kaizen and try to improve the quality of our products with the latest available technologies.
-</string>
+    <p>It is a process that uses electric current to reduce dissolved metal cations so that they form a thin coherent metal coating on an electrode. The term is also used for electrical oxidation of anions onto a solid substrate. Our plating department has the capability to match any shade and finish required. Our products are majorly indirectly exported and hence we have to maintain optimum level of lead and nickel. We strongly believe in Kaizen and try to improve the quality of our products with the latest available technologies.</p>
+    ]]></string>
     <string name="service6">CAPABILITIES</string>
     <string name="serviceDetails6">
-        <ul>Die Casting</ul><br/>
-            7 Machines
-            Ranging from -15 – 20ton
-        <ul>Finishing</ul><br/>
-            CNC Machining
-            Drilling, tapping, grinding
-            Turning, Vibro machine
-        •	In house Process<br/>
-            Painting
-            E-Coating
-            Powder Coating
+        <![CDATA[
+        <span>
+             <b> Die Casting </b>
+                <ul>
+                    <li>7 Machines</li>
+                    <li>Ranging from -15 – 20ton</li>
+                </ul>
+             <b>Finishing</b>
+                <ul>
+                    <li>CNC Machining</li>
+                    <li>Drilling, tapping, grinding</li>
+                    <li>Turning, Vibro machine</li>
+                </ul>
+             <b>In house Process</b>
+                    </ul>
+                    <li>Painting</li>
+                    <li>E-Coating</li>
+                    <li>Powder Coating</li>
+                </ul>
+            </span>
+            ]]>
     </string>
 
 </resources>
