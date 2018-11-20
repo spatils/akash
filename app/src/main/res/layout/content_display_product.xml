@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DisplayProduct.DisplayProduct"
-    tools:showIn="@layout/activity_display_product">
+    tools:showIn="@layout/activity_display_product"
+    >
     <LinearLayout
         android:id="@+id/questionLayout1"
         android:layout_width="match_parent"
