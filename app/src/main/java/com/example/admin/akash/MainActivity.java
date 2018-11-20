@@ -18,7 +18,6 @@ import android.view.MenuItem;
 
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
-import android.widget.Toast;
 
 import com.example.admin.akash.DisplayAccessory.DisplayAccessory;
 import com.example.admin.akash.FAQ.FAQ;
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity
     private  ViewPager mPager;
              public ProgressDialog mProgressDialog;
     private static int currentPage = 0;
-    private static final Integer[] XMEN= {R.drawable.ic_menu_camera,R.drawable.ic_menu_send,R.drawable.ic_menu_manage,R.drawable.ic_menu_share,R.drawable.ic_menu_manage};
+    private static final Integer[] XMEN= {R.drawable.slider1,R.drawable.slider2,R.drawable.slider3};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
     String spreadsheetId = "11sra5UPTT9r_rLsK1H5ltWW9I567-HxxqcZ7lq9S-_Q";
     String scriptURL = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=SHEETID&sheet=Sheet1";
