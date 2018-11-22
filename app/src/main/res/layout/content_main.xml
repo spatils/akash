@@ -15,35 +15,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="2"
-        android:rowCount="4"
         android:orientation="vertical"
-        tools:context=".GridXMLActivity" >
+        android:rowCount="4"
+        tools:context=".GridXMLActivity">
+
         <android.support.v7.widget.CardView
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
             android:id="@+id/bankcardId3"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            android:layout_margin="0dp"
-            android:padding="0dp"
-            android:layout_columnSpan="2"
-            android:layout_rowSpan="2"
             android:layout_column="0"
+            android:layout_columnSpan="2"
             android:layout_gravity="center"
-            android:layout_row="0">
+            android:layout_margin="0dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="0dp">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/pager"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            />
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
 
 
-        <me.relex.circleindicator.CircleIndicator
-            android:id="@+id/indicator"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            />
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
 
 
         </android.support.v7.widget.CardView>
@@ -51,246 +50,281 @@
         <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+
                 <LinearLayout
-                    android:clipToPadding="false"
-                    android:gravity="center"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp">
-                    <android.support.v7.widget.CardView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:id="@+id/bankcardId"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_margin="0dp"
-                        android:padding="0dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="120dp"
-                                android:gravity="center"
-                                android:background="@color/green"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:src="@drawable/baseline_shopping_cart_white_18dp"
-                                    android:padding="10dp"/>
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textAlignment="center"
-                                    android:text="Garment Accessories"
-                                    android:textColor="@color/white"
-                                    android:textSize="18dp" />
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:id="@+id/bankcardId1"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_margin="0dp"
-                        android:padding="0dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="120dp"
-                                android:gravity="center"
-                                android:background="@color/purple"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:padding="10dp"
-                                    android:src="@drawable/baseline_shopping_cart_white_18dp" />
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Shoes Accessories"
-                                    android:textColor="@color/white"
-                                    android:textAlignment="center"
-                                    android:textSize="18dp" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:id="@+id/services"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_margin="0dp"
-                        android:padding="0dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="120dp"
-                                android:gravity="center"
-                                android:background="@color/yellow"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:padding="10dp"
-                                    android:src="@drawable/baseline_build_white_24dp" />
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Services"
-                                    android:textColor="@color/white"
-                                    android:textAlignment="center"
-                                    android:textSize="18dp" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_margin="10dp"
                     android:clipToPadding="false"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp">
-                    <android.support.v7.widget.CardView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:id="@+id/callnow"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_margin="0dp"
-                        android:padding="0dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="120dp"
-                                android:gravity="center"
-                                android:background="@color/pinky"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:src="@drawable/baseline_call_white_24dp"
-                                    android:padding="10dp"/>
-                                <TextView
+                    android:orientation="horizontal">
+
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:stretchColumns="0,1,2">
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/bankcardId"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_column="0"
+                                android:layout_columnWeight="1"
+                                android:layout_margin="0dp"
+                                android:layout_row="0"
+                                android:layout_span="1"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="0dp">
+
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textAlignment="center"
-                                    android:text="Call Now"
-                                    android:textColor="@color/white"
-                                    android:textSize="18dp" />
-                            </LinearLayout>
+                                    android:layout_height="120dp"
+                                    android:background="@color/green"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:src="@drawable/baseline_shopping_cart_white_18dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Garment Accessories"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="18dp" />
+
+                                </LinearLayout>
 
 
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:id="@+id/sendsms"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_margin="0dp"
-                        android:padding="0dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="120dp"
-                                android:gravity="center"
-                                android:background="@color/darkpurple"
-                                android:orientation="vertical">
+                            </android.support.v7.widget.CardView>
 
-                                <ImageView
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:padding="10dp"
-                                    android:src="@drawable/baseline_message_white_24dp" />
-                                <TextView
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/bankcardId1"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_column="1"
+                                android:layout_columnWeight="1"
+                                android:layout_margin="0dp"
+                                android:layout_row="0"
+                                android:layout_span="1"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="0dp">
+
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Send SMS"
-                                    android:textColor="@color/white"
-                                    android:textAlignment="center"
-                                    android:textSize="18dp"
-                                    android:autoLink="phone"
-                                    android:linksClickable="true"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:id="@+id/faq"
-                        android:layout_width="130dp"
-                        android:layout_height="120dp"
-                        android:layout_margin="0dp"
-                        android:padding="0dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="120dp"
-                                android:gravity="center"
-                                android:background="@color/darkblue"
-                                android:orientation="vertical">
+                                    android:layout_height="120dp"
+                                    android:background="@color/purple"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:padding="10dp"
-                                    android:src="@drawable/baseline_contact_support_white_18dp" />
-                                <TextView
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:src="@drawable/baseline_shopping_cart_white_18dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Shoes Accessories"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="18dp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/services"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_column="2"
+                                android:layout_columnWeight="1"
+                                android:layout_margin="0dp"
+                                android:layout_row="0"
+                                android:layout_span="1"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="0dp">
+
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="FAQ"
-                                    android:textColor="@color/white"
-                                    android:textAlignment="center"
-                                    android:textSize="18dp" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                                    android:layout_height="120dp"
+                                    android:background="@color/yellow"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
 
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:src="@drawable/baseline_build_white_18dp"></ImageView>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Services"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="18dp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+                        </TableRow>
+
+                        <TableRow>
+
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/callnow"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_column="0"
+                                android:layout_columnWeight="1"
+                                android:layout_margin="0dp"
+                                android:layout_row="1"
+                                android:layout_span="1"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="0dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:background="@color/pinky"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:src="@drawable/baseline_call_white_24dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Call Now"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="18dp" />
+                                </LinearLayout>
+
+
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/sendsms"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_column="1"
+                                android:layout_columnWeight="1"
+                                android:layout_margin="0dp"
+                                android:layout_row="1"
+                                android:layout_span="1"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="0dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:background="@color/darkpurple"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:src="@drawable/baseline_message_white_24dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:autoLink="phone"
+                                        android:linksClickable="true"
+                                        android:text="Send SMS"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="18dp" />
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/faq"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_column="2"
+                                android:layout_columnWeight="1"
+                                android:layout_margin="0dp"
+                                android:layout_row="1"
+                                android:layout_span="1"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:padding="0dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:background="@color/darkblue"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:src="@drawable/baseline_contact_support_white_18dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="FAQ"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="18dp" />
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+                        </TableRow>
+                    </TableLayout>
                 </LinearLayout>
+
             </LinearLayout>
+
         </ScrollView>
     </GridLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>
