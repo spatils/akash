@@ -9,7 +9,7 @@
     <string name="title_activity_accessory">Accessory</string>
     <string name="title_activity_main2">Product Catagories</string>
     <string name="title_activity_display_images">Display Products</string>
-    <string name="title_activity_show_image">ShowImage</string>
+    <string name="title_activity_show_image">Product Details</string>
     <string name="title_activity_faq">FAQ</string>
     <string name="question1">How to place an order?</string>
     <string name="answer1">You can go to the Dashboard of this app and click the call or sms icon and we will be happy to assist you with placing an order with us.</string>

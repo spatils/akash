@@ -31,6 +31,7 @@ public class DisplayProductGroup extends AppCompatActivity {
         Log.v(TAG,"____Size of ph "+ph.getProductList().size());
         accessoryName =  getIntent().getStringExtra("ACCESSORY");
         productGroupName =  getIntent().getStringExtra("PRODUCTGROUP");
+        setTitle(productGroupName);
         setContentView(R.layout.activity_display_productgroup);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

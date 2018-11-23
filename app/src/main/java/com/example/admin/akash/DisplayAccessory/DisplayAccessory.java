@@ -24,10 +24,12 @@ public class DisplayAccessory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_accessory);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         accessoryName =  getIntent().getStringExtra("ACCESSORY");
+        setTitle(accessoryName);
         ListView listViewAccessory = (ListView)  (ListView) findViewById(R.id.accessorylistView);
         AccessoryAdaptor accessoryAdaptor = null;
         Log.v(this.getLocalClassName(),"accessoryName  "+accessoryName);
