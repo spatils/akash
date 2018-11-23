@@ -11,6 +11,8 @@
         android:contentDescription="icon"
         android:adjustViewBounds="true"
         android:layout_gravity="center"
+        fresco:roundingBorderColor="@color/darkblue"
+        fresco:roundingBorderWidth="1dp"
                       />
 
 
@@ -20,5 +22,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:padding="5dp"
+        android:layout_gravity="center"
         />
 </android.support.constraint.ConstraintLayout>
