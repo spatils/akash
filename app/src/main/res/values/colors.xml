@@ -12,4 +12,8 @@
     <color name="lightgray">#808080</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="green2">#0ae611</color>
+    <color name="orange">#e62f0a</color>
+
+
 </resources>

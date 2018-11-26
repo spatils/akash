@@ -28,8 +28,13 @@
             android:layout_height="325dp"
             android:contentDescription="icon"
             android:layout_gravity="center"
+
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+
+            fresco:roundedCornerRadius="20dp"
             fresco:roundingBorderColor="@color/darkblue"
-            fresco:roundingBorderWidth="1dp"
+            fresco:roundingBorderWidth="4dp"
             />
         <TextView
         android:id="@+id/productDescription"

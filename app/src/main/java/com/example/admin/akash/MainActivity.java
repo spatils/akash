@@ -1,6 +1,6 @@
 package com.example.admin.akash;
 
-import android.app.ProgressDialog;
+
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.Uri;
@@ -18,6 +18,8 @@ import android.view.MenuItem;
 
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
+import android.view.WindowManager;
+import android.widget.ProgressBar;
 
 import com.example.admin.akash.DisplayAccessory.DisplayAccessory;
 import com.example.admin.akash.FAQ.FAQ;
@@ -43,7 +45,7 @@ import me.relex.circleindicator.CircleIndicator;
 public class MainActivity extends AppCompatActivity
          {
     private  ViewPager mPager;
-             public ProgressDialog mProgressDialog;
+
     private static int currentPage = 0;
     private static final Integer[] XMEN= {R.drawable.slider1,R.drawable.slider2,R.drawable.slider3};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity
     String JSONURL = scriptURL.replace("SHEETID",spreadsheetId);
     ProductHandler ph = ProductHandler.getInstance();
     String TAG = "MainActivity";
+    public ProgressBar progressBar ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
 
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
         CardView  garmentAccessory = (CardView) findViewById(R.id.bankcardId);
         garmentAccessory.setOnClickListener(new View.OnClickListener() {
@@ -295,19 +299,16 @@ public class MainActivity extends AppCompatActivity
         }
         @Override
         protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-            mProgressDialog.dismiss();
+            progressBar.setVisibility(View.INVISIBLE);
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
         }
     }
 
     private void showProgressBar(){
-        if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(this);
-            mProgressDialog.setMessage("Loading ...");
-            mProgressDialog.setIndeterminate(true);
-        }
+        progressBar.setVisibility(View.VISIBLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 
-        mProgressDialog.show();
     }
 
 
