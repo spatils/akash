@@ -52,12 +52,12 @@ public class Services extends AppCompatActivity {
         minus4 = (ImageButton) findViewById(R.id.minus4);
 
         serviceDetails5 = (TextView) findViewById(R.id.serviceDetails5);
-        serviceDetails5.setText(Html.fromHtml(getString(R.string.serviceDetails5)));
+        serviceDetails5.setText(Html.fromHtml(getString(R.string.serviceDetails5),0));
         plus5 = (ImageButton) findViewById(R.id.plus5);
         minus5 = (ImageButton) findViewById(R.id.minus5);
 
         serviceDetails6 = (TextView) findViewById(R.id.serviceDetails6);
-        serviceDetails6.setText(Html.fromHtml(getString(R.string.serviceDetails6)));
+        serviceDetails6.setText(Html.fromHtml(getString(R.string.serviceDetails6),0));
         plus6 = (ImageButton) findViewById(R.id.plus6);
         minus6 = (ImageButton) findViewById(R.id.minus6);
     }

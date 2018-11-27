@@ -1,8 +1,10 @@
 package com.example.admin.akash;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity
     private  ViewPager mPager;
 
     private static int currentPage = 0;
-    private static final Integer[] XMEN= {R.drawable.slider1,R.drawable.slider2,R.drawable.slider3};
+    private static final Integer[] XMEN= {R.drawable.slider11,R.drawable.slider2,R.drawable.slider3};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
     String spreadsheetId = "11sra5UPTT9r_rLsK1H5ltWW9I567-HxxqcZ7lq9S-_Q";
     String scriptURL = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=SHEETID&sheet=Sheet1";
@@ -192,28 +194,13 @@ public class MainActivity extends AppCompatActivity
     }
     private boolean checkInternetConenction() {
         // get Connectivity Manager object to check connection
-        ConnectivityManager connec;
-        connec = (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE);
+        ConnectivityManager cm =
+                (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        // Check for network connections
-        if (connec.getNetworkInfo(0).getState() ==
-                android.net.NetworkInfo.State.CONNECTED ||
-                connec.getNetworkInfo(0).getState() ==
-                        android.net.NetworkInfo.State.CONNECTING ||
-                connec.getNetworkInfo(1).getState() ==
-                        android.net.NetworkInfo.State.CONNECTING ||
-                connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED) {
-            //Toast.makeText(this, " Connected ", Toast.LENGTH_LONG).show();
-            return true;
-        } else if (
-                connec.getNetworkInfo(0).getState() ==
-                        android.net.NetworkInfo.State.DISCONNECTED ||
-                        connec.getNetworkInfo(1).getState() ==
-                                android.net.NetworkInfo.State.DISCONNECTED) {
-            //Toast.makeText(this, " Not Connected ", Toast.LENGTH_LONG).show();
-            return false;
-        }
-        return false;
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null &&
+                activeNetwork.isConnected();
+        return isConnected;
     }
     public class ReadGoogleWorkSheet  extends AsyncTask<Void, Void, Void> {
 
