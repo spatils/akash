@@ -22,19 +22,19 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_gravity="center"
             />
-        <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/productImage"
+
+        <com.facebook.samples.zoomable.ZoomableDraweeView
+            android:id="@+id/zoomable"
             android:layout_width="325dp"
             android:layout_height="325dp"
-            android:contentDescription="icon"
-            android:layout_gravity="center"
-
-            fresco:roundBottomLeft="true"
-            fresco:roundBottomRight="true"
-
             fresco:roundedCornerRadius="20dp"
             fresco:roundingBorderColor="@color/darkblue"
             fresco:roundingBorderWidth="4dp"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            android:contentDescription="icon"
+            android:layout_gravity="center"
+
             />
         <TextView
         android:id="@+id/productDescription"
