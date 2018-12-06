@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="purple">#7c4dff</color>
-    <color name="yellow">#ffb300</color>
+    <color name="yellow">#674904</color>
     <color name="green">#00bfa5</color>
     <color name="darkblue">#2980b9</color>
     <color name="darkpurple">#a569bd</color>
@@ -14,6 +14,10 @@
     <color name="black">#000000</color>
     <color name="green2">#0ae611</color>
     <color name="orange">#e62f0a</color>
+    <color name="palegreen">#bec9dd8c</color>
+    <color name="darkgreen">#e0024b0b</color>
+    <color name="deepblue">#4836f0</color>
+    <color name="deeppurple">#f6412750</color>
 
 
 </resources>

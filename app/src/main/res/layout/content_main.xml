@@ -17,7 +17,8 @@
         android:columnCount="2"
         android:orientation="vertical"
         android:rowCount="4"
-        tools:context=".GridXMLActivity">
+        tools:context=".GridXMLActivity"
+        android:background="@color/palegreen">
 
         <android.support.v7.widget.CardView
             android:id="@+id/bankcardId3"
@@ -52,12 +53,14 @@
 
         <ScrollView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/palegreen">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/palegreen">
 
 
                 <LinearLayout
@@ -67,6 +70,7 @@
                     android:clipToPadding="false"
                     android:gravity="center"
                     android:orientation="horizontal">
+
 
 
                     <TableLayout
@@ -102,7 +106,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="120dp"
-                                    android:background="@color/green"
+                                    android:background="@color/darkgreen"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -142,7 +146,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="120dp"
-                                    android:background="@color/purple"
+                                    android:background="@color/yellow"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -182,7 +186,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="120dp"
-                                    android:background="@color/yellow"
+                                    android:background="@color/colorAccent"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -265,7 +269,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="120dp"
-                                    android:background="@color/darkpurple"
+                                    android:background="@color/deeppurple"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -305,7 +309,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="120dp"
-                                    android:background="@color/darkblue"
+                                    android:background="@color/deepblue"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
