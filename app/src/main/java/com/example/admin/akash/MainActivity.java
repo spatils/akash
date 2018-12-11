@@ -25,6 +25,7 @@ import android.widget.ProgressBar;
 
 import com.example.admin.akash.DisplayAccessory.DisplayAccessory;
 import com.example.admin.akash.FAQ.FAQ;
+import com.example.admin.akash.aboutus.AboutUs;
 import com.example.admin.akash.common.Product;
 import com.example.admin.akash.common.ProductGroup;
 import com.example.admin.akash.common.ProductHandler;
@@ -135,6 +136,19 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
+        CardView  aboutUs = (CardView) findViewById(R.id.aboutus);
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this,
+                        AboutUs.class);
+                startActivity(myIntent);
+
+            }
+        });
+
+
+
 
         init();
         if(!checkInternetConenction()) Snackbar.make(findViewById(R.id.drawer_layout), "Please connect to the internet", Snackbar.LENGTH_LONG)

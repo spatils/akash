@@ -56,5 +56,18 @@
             </span>
             ]]>
     </string>
-
+    <string name="title_activity_aboutus">About Us</string>
+    <string name="aboutusstring">
+        <![CDATA[
+            <span>
+                <p>
+                Akash Industries was established in the year 1996. We are a strong technology based leading Die Casting Company having an excellent track record for superior quality products.
+We use zamak 3 as raw material for our castings. Our products are acknowledged for excellent performance and long-term reliability. Standards make an enormous contribution to most aspects of our lives. Our primary mission is providing products with excellent quality with better technology and features at much lower costs. We have a capacity to manufacture 50,000 buckles per day.
+                </p>
+                <p>
+                Our tooling divisions employ state-of-the art technology to design, build and verify all tooling projects. From our Uni-gaphics CAD systems to fused deposition modelling prototyping equipment to CNC electrical discharge machines to automated coordinate measuring machines to our highly skilled tooling engineers we employ the best people and products available to ensure your tooling will be world class. We strike a perfect balance between people, processes and plans.
+                </p>
+            </span>
+            ]]>
+    </string>
 </resources>

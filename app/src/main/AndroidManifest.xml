@@ -46,6 +46,10 @@
         <activity
             android:name=".services.Services"
             android:label="@string/title_activity_services"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".aboutus.AboutUs"
+            android:label="@string/title_activity_aboutus"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
