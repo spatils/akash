@@ -11,6 +11,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_gravity="center"
         android:textColor="@color/white"
+
+
         />
 
 

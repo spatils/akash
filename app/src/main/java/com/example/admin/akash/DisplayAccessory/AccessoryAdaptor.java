@@ -30,10 +30,9 @@ public class AccessoryAdaptor extends ArrayAdapter<String>   {
         Button textViewEven = (Button) rowView.findViewById(R.id.evenAccessory);
         textViewEven.setText(values.get(position));
         if (position % 2 == 0) {
-            textViewEven.setBackgroundColor(Color.parseColor("#536DFE"));
+            textViewEven.setBackgroundColor(Color.parseColor("#e0024b0b"));
         } else
-            textViewEven.setBackgroundColor(Color.parseColor("#2196F3"));
-
+            textViewEven.setBackgroundColor(Color.parseColor("#e62f0a"));
 
         textViewEven.setOnClickListener(  new View.OnClickListener() {
             @Override
