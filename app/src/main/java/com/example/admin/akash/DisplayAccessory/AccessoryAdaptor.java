@@ -2,6 +2,8 @@ package com.example.admin.akash.DisplayAccessory;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +24,7 @@ public class AccessoryAdaptor extends ArrayAdapter<String>   {
         this.context = context;
         this.values = values;
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
@@ -29,6 +32,7 @@ public class AccessoryAdaptor extends ArrayAdapter<String>   {
         View rowView = inflater.inflate(R.layout.table_accessory_listview, parent, false);
         Button textViewEven = (Button) rowView.findViewById(R.id.evenAccessory);
         textViewEven.setText(values.get(position));
+
         if (position % 2 == 0) {
             textViewEven.setBackgroundColor(Color.parseColor("#e0024b0b"));
         } else
